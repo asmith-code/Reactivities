@@ -22,7 +22,7 @@ namespace API
         {
             var host = CreateHostBuilder(args).Build(); //previously CreateHostBuilder(args).Build().Run();
 
-            using var scope = host.Services.CreateScope(); //using key word says that after the 'Main' function has run the scope variable will be disposed of by the framework
+            using var scope = host.Services.CreateScope(); //'using' key word says that after the 'Main' function has run the scope variable will be disposed of by the framework
                                                            //scope should host any services we create in this method and be disposed of afterwards
 
             var services = scope.ServiceProvider;
